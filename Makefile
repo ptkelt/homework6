@@ -1,7 +1,7 @@
 
 all:
 	make build
-	make archive
+	make doc
 
 build: main.o game.o othello.o
 	g++ main.o game.o othello.o -o game
@@ -17,9 +17,16 @@ othello.o: othello.cc othello.h
 
 clean:
 	rm *.o game
+	rm -r html
+	rm -r latex
 
 archive:
 	tar cvf archive.tar.gz *
+
+doc:
+	doxygen game.cc
+	doxygen othello.cc
+	doxygen main.cc
 
 
 	

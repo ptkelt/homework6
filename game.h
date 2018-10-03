@@ -6,12 +6,19 @@
 #include <queue>   // Provides queue<string>
 #include <string>  // Provides string
 
+
+/**
+* This is the header file for game.cc
+*/
 namespace main_savitch_14
 {
 class game
 {
 public:
 	// ENUM TYPE
+	/**
+	* Possible game outcomes
+	*/
 	enum who { HUMAN, NEUTRAL, COMPUTER }; // Possible game outcomes
 
 	// CONSTRUCTOR and DESTRUCTOR

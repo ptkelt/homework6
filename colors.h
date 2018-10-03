@@ -28,6 +28,10 @@
 #define COLORS_H
 
 #include <string>
+
+/**
+* This header files allows for colors to be used
+*/
 using namespace std;
 
 const string BLINK     = "\e[5m";          //don't use this your

@@ -6,7 +6,9 @@
 #ifndef PIECE_H
 #define PIECE_H
 enum color {black, white, blank};
-
+/**
+* This is the header file that manages the color of the pieces
+*/
 class piece {
 public:
 	piece() {theColor = blank;}

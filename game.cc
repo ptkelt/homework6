@@ -17,6 +17,9 @@ namespace main_savitch_14
 //*************************************************************************
 // PUBLIC MEMBER FUNCTIONS
 
+/**
+* This function runs the game and keeps track who is moving
+*/
 game::who game::play( )
 // The play function should not be overridden. It plays one round of the
 // game, with the human player moving first and the computer second.
@@ -45,11 +48,18 @@ game::who game::play( )
 //*************************************************************************
 // OPTIONAL VIRTUAL FUNCTIONS (overriding these functions is optional)
 
+/**
+* This displays the board with the string 'message' containing the board
+*/
 void game::display_message(const string& message) const
 {
 	cout << message;
 }
 
+
+/**
+* This gets the user's move from keyboard input 
+*/
 string game::get_user_move( ) const
 {
 	string answer;
@@ -60,6 +70,9 @@ string game::get_user_move( ) const
 	return answer;
 }
 
+/**
+* This evaluates who is winning
+*/
 game::who game::winning()const {
 
 	int value = evaluate();
@@ -77,6 +90,10 @@ game::who game::winning()const {
 //*************************************************************************
 // PRIVATE FUNCTIONS (these are the same for every game)
 
+
+/**
+* This function is for the computer. The int 'look_head' looks ahead that many moves while the int 'beat this' is used to help find the best move
+*/
 int game::eval_with_lookahead(int look_ahead, int beat_this)
 // Evaluate a board position with lookahead.
 // --int look_aheads:  How deep the lookahead should go to evaluate the move.
@@ -125,6 +142,10 @@ int game::eval_with_lookahead(int look_ahead, int beat_this)
 	return -best_value;
 }
 
+
+/**
+* This function finds all possible moves for the computer
+*/
 void game::make_computer_move( )
 {
 	queue<string> moves;
@@ -158,6 +179,9 @@ void game::make_computer_move( )
 	make_move(best_move);
 }
 
+/**
+* This function makes the human's move 
+*/
 void game::make_human_move( ) {
 	string move;
 

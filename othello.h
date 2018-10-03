@@ -13,7 +13,9 @@ using namespace std;
 
 namespace main_savitch_14
 {
-
+/**
+* This is the headr file for the specific game
+*/
 class Othello: public game {
 public:
 

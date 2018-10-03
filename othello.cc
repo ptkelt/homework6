@@ -7,7 +7,9 @@
 
 namespace main_savitch_14
 {
-
+/**
+* This functions displays the game board
+*/
 void Othello::display_status()const
 {
   cout << BLUE << "   _______ _______ _______ _______ _______ _______ _______ _______\n";
